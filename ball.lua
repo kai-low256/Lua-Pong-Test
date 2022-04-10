@@ -6,7 +6,7 @@ function Ball:load()
    self.width = 20
    self.height = 20
    self.speed = 650
-   self.xVel = -self.speed
+   self.xVel = - self.speed
    self.yVel = 0
 end
 
@@ -53,9 +53,7 @@ function Ball:collide()
       self.yVel = 0
       self.xVel = -self.speed
    end
-end
 
-function Ball:score()
    if self.x < 0 then
       self:resetPosition(1)
       Score.ai = Score.ai + 1
